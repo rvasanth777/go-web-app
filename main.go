@@ -6,22 +6,22 @@ import (
 )
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	// Render the home html page from static folder
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	http.ServeFile(w, r, "static/home.html")
 }
 
 func coursePage(w http.ResponseWriter, r *http.Request) {
-	// Render the course html page
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	http.ServeFile(w, r, "static/courses.html")
 }
 
 func aboutPage(w http.ResponseWriter, r *http.Request) {
-	// Render the about html page
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	http.ServeFile(w, r, "static/about.html")
 }
 
 func contactPage(w http.ResponseWriter, r *http.Request) {
-	// Render the contact html page
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	http.ServeFile(w, r, "static/contact.html")
 }
 
